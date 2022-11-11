@@ -1,0 +1,10 @@
+
+<div *ngIf="teacher">
+    <div>
+        <label for="name">Nombre: <input id="name" type="text" [(ngModel)]="teacher.teacher_name"></label>
+    </div>
+    <div>
+        <label for="lastName">Apellido: <input id="lastName" type="text" [(ngModel)]="teacher.teacher_lastName"></label>
+    </div>
+    <button class="rbutton" (click)="changeTeacher()">Cambiar</button>
+</div>

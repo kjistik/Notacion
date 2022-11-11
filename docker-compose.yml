@@ -1,0 +1,54 @@
+services:
+  notacion_frontend:
+    networks:
+      - notacion
+    image: kjistik/notacion-frontend:latest
+    expose:
+      - "4200"
+      - "8080"
+    ports:
+      - "4200:4200"
+    links:
+    - notacion_backend
+    container_name: notacion-frontend
+
+  notacion_backend:
+    networks:
+      - notacion
+    expose:
+      - "8080"
+      - "3306"      
+    ports:
+      - "8008:8080" 
+    image: notacion-backend:latest
+    container_name: notacion-backend
+    links:
+      - notacion_docker
+    depends_on:
+      - notacion_docker
+
+  notacion_docker:
+    networks:
+      - notacion
+    image: "mariadb"
+    container_name: notacion-db
+    expose:
+      - "3306"
+    ports:
+      - "3307:3306"
+    environment:
+      - MARIADB_ROOT_PASSWORD=kjistik_docker
+      - MARIADB_DATABASE=notacion_docker
+      - MYSQL_AUTO_UPGRADE=true
+      - MARIADB_USER=notacion_docker
+      - MARIADB_PASSWORD=TheCakeIsaLie
+    volumes:
+      - notacion-db
+
+networks:
+  notacion:
+    driver: bridge
+    name: notacion
+
+volumes:
+  notacion-db: 

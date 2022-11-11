@@ -1,0 +1,36 @@
+.division {
+    background-color: #F2D388;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    margin: auto;
+    height: max-content;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.fondo {
+    background-color: #ffe4c4;
+    padding-top: 20px;
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.name {
+    margin-left: 20px;
+}
+
+.info {
+    background-color: #fff8dc;
+    margin: 0 5%;
+    width: 90%;
+}
+
+button {
+    margin: 0 0 15px 20px;
+
+}

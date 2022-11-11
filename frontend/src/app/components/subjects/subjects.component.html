@@ -1,0 +1,25 @@
+<div class="content">
+    <h3 class="title">Lista de asignaturas: </h3>
+
+    <div class="list_background">
+
+        <div class="list">
+            <ul *ngFor="let s of subjects">
+                <div class="display">
+                    <li class="li item" *ngIf="s.active==true">Asignatura: {{s.subject_name}}</li>
+                    <button class="li button" *ngIf="s.active==true" (click)="disable(s)"><span>Eliminar</span></button>
+                </div>
+            </ul>
+        </div>
+        <div *ngIf="flag==false">
+            <button class="add" (click)="triger()">Añadir</button>
+            <button class="add" routerLink="">Volver</button>
+        </div>
+        <div *ngIf="flag==true">
+            <label class="adding" for="input">Ingresar asignatura: <input id="input" type="text" #subject></label>
+            <button class="adding" (click)="addSubject(subject.value); subject.value=''">Añadir</button>
+        </div>
+        <button *ngIf="flag==true" class="back" (click)="goBack()">Salir</button>
+
+    </div>
+</div>

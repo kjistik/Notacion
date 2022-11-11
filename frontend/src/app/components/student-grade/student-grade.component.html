@@ -1,0 +1,30 @@
+<div *ngIf="!flag1">
+    <label for="subjects" class="input">Elija una asignatura:
+        <select class="input" [(ngModel)]="subject" id="subjects">
+            <ng-container *ngFor="let s of subjects">
+                <option *ngIf="s.active" [ngValue]="s">{{s.subject_name}}</option>
+            </ng-container>
+        </select>
+    </label>
+    <button (click)="changeFlag1()">siguiente</button>
+</div>
+<div *ngIf="flag1 && !flag2 && subject">
+    <label for="teachers" class="input">Elija un docente:
+        <select class="input" [(ngModel)]="teacher" id="teachers">
+            <ng-container *ngFor="let t of teachers">
+                <option *ngIf="t.subject_teacher.idSubject==subject.idSubject && t.active==true" [ngValue]="t">
+                    {{t.teacher_name}}
+                    {{t.teacher_lastName}}</option>
+            </ng-container>
+        </select>
+    </label>
+    <button (click)="changeFlag2()">siguiente</button>
+</div>
+<div *ngIf="flag2">
+    <label class="input" for="grade">Calificacion:
+        <select class="input" id="grade" [(ngModel)]="grade">
+            <option *ngFor="let g of numbers" [ngValue]="g">{{g}}</option>
+        </select>
+    </label>
+    <button *ngIf="student && subject && teacher" (click)="addGrade(grade ,student, teacher)">añadir</button>
+</div>

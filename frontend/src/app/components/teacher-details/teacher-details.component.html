@@ -1,0 +1,28 @@
+<div class="division">
+    <div *ngIf="teacher" class="fondo">
+        <div class="name">
+            <div>
+                <p><em>Nombre: {{teacher.teacher_name}}</em></p>
+            </div>
+            <div>
+                <p><em>Apellido: {{teacher.teacher_lastName}}</em></p>
+            </div>
+        </div>
+        <div *ngIf="flag">
+            <app-teacher-update></app-teacher-update>
+        </div>
+        <ul *ngFor="let grade of grades">
+            <div class="info" *ngIf="grade.grades_teacher.idTeacher==teacher.idTeacher">
+                <div>Asignatura: {{grade.grades_teacher.subject_teacher.subject_name}}
+                </div>
+                <div>Caificación: {{grade.grade}}</div>
+                <div>Alumno: {{grade.grades_student.student_name}} {{grade.grades_student.student_lastName}}</div>
+            </div>
+        </ul>
+        <button type="button">Volver</button>
+        <button>
+            <span>
+                <a (click)="changeFlag()">Editar</a></span>
+        </button>
+    </div>
+</div>

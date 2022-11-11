@@ -1,0 +1,24 @@
+<div class="color">
+  <div class="space"></div>
+  <div class="input">
+    <label for="new-student">Nombre: </label>
+    <input id="new-student" type="text" #name />
+  </div>
+  <div class="input">
+    <label for="new-student">Apellido: </label>
+    <input id="new-student" type="text" #lastName />
+  </div>
+  <label for="subject" class="select">Asignatura:
+    <select id="subject" [(ngModel)]="subject">
+      <ng-container *ngFor="let s of subjects">
+        <option *ngIf="s.active" [ngValue]="s">{{s.subject_name}}</option>
+      </ng-container>
+    </select>
+  </label>
+  <div class="button">
+    <button type="button" *ngIf="subject"
+      (click)="addTeacher(name.value, lastName.value, subject); name.value='';lastName.value=''">
+      Nuevo docente
+    </button>
+    <button (click)="back()">Volver</button>
+  </div>

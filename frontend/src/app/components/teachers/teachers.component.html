@@ -1,0 +1,26 @@
+<div class="division">
+    <h3 class="title">Lista de docentes</h3>
+
+    <div class="list_background">
+        <div class="list">
+            <tr>
+                <th>Legajo</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+
+            <tr *ngFor="let teacher of teachers">
+
+                <td *ngIf="teacher.active==true" class="legajo">{{teacher.idTeacher}}</td>
+                <td *ngIf="teacher.active==true" class="name">{{teacher.teacher_name}} </td>
+                <td *ngIf="teacher.active==true" class="name">{{teacher.teacher_lastName}}</td>
+                <button class="buttons" *ngIf="teacher.active==true"><span><a
+                            routerLink="/teacher_details/{{teacher.idTeacher}}">Detalles</a></span></button>
+                <button class="buttons" *ngIf="teacher.active==true" (click)="disable(teacher)">Eliminar</button>
+            </tr>
+            <button class="button"><a href="/add_teacher">Nuevo</a></button>
+            <button class="button" (click)="reload()"><span>Recargar</span></button>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

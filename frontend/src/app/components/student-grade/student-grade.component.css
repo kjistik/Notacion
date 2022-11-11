@@ -1,0 +1,17 @@
+select {
+    margin-left: 5px;
+    margin-bottom: 20px;
+    width: 15.35rem;
+}
+
+button {
+    margin-left: 20px;
+}
+
+label {
+    width: 25rem;
+}
+
+.input {
+    display: inline;
+}

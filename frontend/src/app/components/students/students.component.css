@@ -1,0 +1,66 @@
+.division {
+    background-color: #F2D388;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    margin: auto;
+    height: max-content;
+}
+
+.button {
+    width: 7rem;
+    margin-top: 0.5rem
+}
+
+.list_background {
+    background-color: #ffe4c4;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    max-width: 1400px  
+}
+
+.buttons {
+    width: 4.4rem;
+}
+
+.list {
+    padding: 2rem;
+}
+
+table,
+th,
+tr,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.title {
+    margin-left: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.legajo {
+    width: 15%;
+    text-align: center;
+    margin: auto;
+}
+
+.name {
+    width: 37%
+}
+
+tr {
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    background-color: #fff8dc;
+}

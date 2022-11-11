@@ -1,0 +1,17 @@
+<div class="color">
+  <div class="space"></div>
+  <div class="input">
+    <label for="new-student">Nombre: </label>
+    <input id="new-student" type="text" #name />
+  </div>
+  <div class="input">
+    <label for="new-student">Apellido: </label>
+    <input id="new-student" type="text" #lastName />
+  </div>
+  <div class="button">
+    <button type="button" (click)="addStudent(name.value, lastName.value); name.value='';lastName.value=''">
+      Nuevo alumno
+    </button>
+    <button (click)="back()">Volver</button>
+  </div>
+</div>

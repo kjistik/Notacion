@@ -1,0 +1,16 @@
+CREATE USER 'notacion_docker'@'%' IDENTIFIED BY 'TheCakeIsaLie';
+GRANT Alter ON *.* TO 'notacion_docker'@'%';
+GRANT Create ON *.* TO 'notacion_docker'@'%';
+GRANT Create view ON *.* TO 'notacion_docker'@'%';
+GRANT Delete ON *.* TO 'notacion_docker'@'%';
+GRANT Delete history ON *.* TO 'notacion_docker'@'%';
+GRANT Drop ON *.* TO 'notacion_docker'@'%';
+GRANT Grant option ON *.* TO 'notacion_docker'@'%';
+GRANT Index ON *.* TO 'notacion_docker'@'%';
+GRANT Insert ON *.* TO 'notacion_docker'@'%';
+GRANT References ON *.* TO 'notacion_docker'@'%';
+GRANT Select ON *.* TO 'notacion_docker'@'%';
+GRANT Show view ON *.* TO 'notacion_docker'@'%';
+GRANT Trigger ON *.* TO 'notacion_docker'@'%';
+GRANT Update ON *.* TO 'notacion_docker'@'%';
+GRANT USAGE ON *.* TO 'notacion_docker'@'%';

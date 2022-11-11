@@ -1,0 +1,10 @@
+<div class="division"></div>
+<div *ngIf="student" class="fondo">
+    <div class="input">
+        <label for="name">Nombre: <input id="name" type="text" [(ngModel)]="student.student_name"></label>
+    </div>
+    <div class="input">
+        <label for="lastName">Apellido: <input id="lastName" type="text" [(ngModel)]="student.student_lastName"></label>
+    </div>
+    <button class="button" (click)="changeStudent()">Cambiar</button>
+</div>

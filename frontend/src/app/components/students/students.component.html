@@ -1,0 +1,25 @@
+<div class="division">
+    <h3 class="title">Lista de estudiantes</h3>
+
+    <div class="list_background">
+        <div class="list">
+            <tr>
+                <th>Legajo</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+
+            <tr *ngFor="let student of alumnos">
+
+                <td *ngIf="student.active==true" class="legajo">{{student.idStudent}}</td>
+                <td *ngIf="student.active==true" class="name">{{student.student_name}} </td>
+                <td *ngIf="student.active==true" class="name">{{student.student_lastName}}</td>
+                <button class="buttons" *ngIf="student.active==true"><span><a
+                            routerLink="/details_student/{{student.idStudent}}">Detalles</a></span></button>
+                <button class="buttons" *ngIf="student.active==true" (click)="disable(student)">Eliminar</button>
+            </tr>
+            <button class="button"><a href="/add_student">Nuevo</a></button>
+            <button class="button" (click)="reload()"><span>Recargar</span></button>
+        </div>
+    </div>
+</div>

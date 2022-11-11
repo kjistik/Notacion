@@ -1,0 +1,31 @@
+.color {
+    background-color: #F2D388;
+}
+
+label {
+    width: 6rem;
+}
+
+.space {
+    height: 3rem;
+    background-color: #F2D388;
+}
+
+.input {
+    margin-left: 1rem;
+}
+
+.button {
+    margin-left: 7rem;
+}
+
+.select {
+    margin-left: 1rem;
+    display: inline;
+}
+
+select {
+    margin-left: 0.7rem;
+    width: 13.5rem;
+    display: inline;
+}
